@@ -10,11 +10,11 @@ const http = require('http');const server = http.createServer((req, res) => {
     });
     req.on('end', () => {
         console.log(body);
-		fs.writeFile('test.txt', content,err => {});
+		fs.writeFile('test.txt', body,err => {});
 		res.end('ok');
     });
 	}
 
-});server.listen(process.env.PORT  || 3000);
+});server.listen(process.env.PORT || 3000);
 
 
